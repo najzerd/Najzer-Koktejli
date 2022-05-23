@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+    <a class="btn btn-danger mb-2" asp-area="" asp-controller="Order" asp-action="Clear">Clear orders for table</a>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    Order Id
+                </th>
+                <th class="text-center">
+                    Cocktale Name
+                </th>
+                <th class="text-center">
+                    Cocktale Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int sum = 0; }
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td class="text-center" width="10%">@order.OrderId</td>
+                    <td class="text-center" width="30%">@order.CocktailName</td>
+                    <td class="text-center" width="20%">@order.CocktailPrice€</td>
+                </tr>
+                sum += order.CocktailPrice;
+            }
+            <tr>
+                <td></td><td></td><td><h2 class="text-center">Total: @sum€</h2></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

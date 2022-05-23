@@ -1,0 +1,40 @@
+﻿@model Najžer_RST_MAG_RNSUV_Projektna.Models.CocktailModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<form method="post">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info p1-3">Place Order</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CocktailName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="CocktailName" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CocktailPrice"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="CocktailPrice" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-primary w-100" value="Confirm Order" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,50 @@
+﻿@model Najžer_RST_MAG_RNSUV_Projektna.Models.CocktailModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form method="post">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info p1-3">Edit Cocktail</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="ImageTitle"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="ImageTitle" class="form-control" />
+                        <span asp-validation-for="ImageTitle" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CocktailName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="CocktailName" class="form-control" />
+                        <span asp-validation-for="CocktailName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CocktailPrice"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="CocktailPrice" class="form-control" />
+                        <span asp-validation-for="CocktailPrice" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-success w-100" value="Update" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

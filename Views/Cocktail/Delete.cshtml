@@ -1,0 +1,47 @@
+﻿@model Najžer_RST_MAG_RNSUV_Projektna.Models.CocktailModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info p1-3">Delete Cocktail</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="ImageTitle"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="ImageTitle" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CocktailName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="CocktailName" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CocktailPrice"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="CocktailPrice" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-danger w-100" value="Delete" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

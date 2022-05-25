@@ -11,7 +11,7 @@ Dopolnjeno:<br />
 -Customer lahko samo naroča koktejle<br />
 -Cocktail Manager lahko dodaja, briše in ureja koktejle, ne more pa jih naročati<br />
 -Bartender ima pregled nad naročili za mizo, ko plačajo, lahko počisti vsa naročila za mizo<br />
--Slike se dodajajo iz mape wwwrroot/img ter se dinamično izpišejo v dropdownu za managerja (vse slike s katerimi razpolagamo je podrebno dodati v to mapo)<br />
+-Slike se dodajajo iz mape wwwroot/img ter se dinamično izpišejo v dropdownu za managerja (vse slike s katerimi razpolagamo je podrebno dodati v to mapo)<br />
 
 V primeru da bi API želeli v celoti implementirati, bi bilo potrebno še dodati/urediti:<br />
 -Ločene poglede (omejitve dostopa) za stranke in natakarje.<br />

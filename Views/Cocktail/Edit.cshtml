@@ -15,7 +15,17 @@
                         <label asp-for="ImageTitle"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="ImageTitle" class="form-control" />
+                        @using System.IO;
+                        @{ string[] filePaths = Directory.GetFiles("wwwroot/img/Cocktails/");}
+                        <select asp-for="ImageTitle">
+                            @{
+                                foreach (string path in filePaths)
+                                {
+                                    string name = path.Substring(22);
+                                    <option value="@name">@name</option>
+                                }
+                            }
+                        </select>
                         <span asp-validation-for="ImageTitle" class="text-danger"></span>
                     </div>
                 </div>

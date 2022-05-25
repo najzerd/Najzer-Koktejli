@@ -40,7 +40,7 @@ namespace Najžer_RST_MAG_RNSUV_Projektna.Controllers
             {
                 _db.Order.Add(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return View("Ordered");
             }
             return View(obj);
         }

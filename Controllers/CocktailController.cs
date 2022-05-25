@@ -3,6 +3,7 @@ using Najžer_RST_MAG_RNSUV_Projektna.Data;
 using Najžer_RST_MAG_RNSUV_Projektna.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -40,7 +41,7 @@ namespace Najžer_RST_MAG_RNSUV_Projektna.Controllers
             {
                 _db.Cocktail.Add(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "CocktailManager");
             }
             return View(obj);
         }
@@ -62,7 +63,7 @@ namespace Najžer_RST_MAG_RNSUV_Projektna.Controllers
             {
                 _db.Cocktail.Update(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "CocktailManager");
             }
             return View(obj);
         }
@@ -81,7 +82,7 @@ namespace Najžer_RST_MAG_RNSUV_Projektna.Controllers
         {
             _db.Cocktail.Remove(obj);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "CocktailManager");
         }
     }
 }

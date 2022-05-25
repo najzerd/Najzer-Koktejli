@@ -9,6 +9,7 @@
     <h4>The Cocktail will be billed to your table.</h4>
     <p class="smallText"<i>All our Cocktails contain alcohol.</i></p>
 
+    <a class="btn btn-primary mt-1" asp-area="" asp-controller="Cocktail" asp-action="Add">Add a cocktail</a>
 
     <!-- Container za grid s koktejli -->
     <div class="container">
@@ -18,13 +19,16 @@
             {
                 var imagePath = "~/img/Cocktails/" + (cocktail.ImageTitle);
             <div class="col-4 mb-5 mt-5">
-                <a class="cocktailImage" asp-area="" asp-controller="Order" asp-route-Id="@cocktail.Id" asp-route-CocktailName="@cocktail.CocktailName" asp-route-CocktailPrice="@cocktail.CocktailPrice" asp-action="Add">
+                <a class="cocktailImage">
                     <img src="@imagePath" class="w-100 h-100" asp-append-version="true" /> <!-- Izognemu refreshu -->
                 </a>
-                <p class="mt-1">@cocktail.CocktailName</p>
+                <p class="mt-1">@cocktail.CocktailName - Price: @cocktail.CocktailPrice€</p>
+                <div class="w-75 btn-group" role="group">
+                    <a class="btn btn-primary" asp-area="" asp-controller="Cocktail" asp-route-Id="@cocktail.Id" asp-action="Edit">Edit</a>
+                    <a class="btn btn-danger" asp-area="" asp-controller="Cocktail" asp-route-Id="@cocktail.Id" asp-action="Delete">Delete</a>
+                </div>
             </div>
             }
         </div>
     </div>
 </div>
-

@@ -1,8 +1,8 @@
-# Najžer-RST-MAG-RNSUV-Projektna
+# Najžer-Koktejli
 
-Projektna naloga simulira API za naročevanje koktejlov v baru. Stranka koktejl naroči preko terminala/tablice, ki je dodeljen njeni mizi.
+Simuliran API za naročevanje koktejlov v baru. Stranka koktejl naroči preko terminala/tablice, ki je dodeljen njeni mizi.
 
-Za demonstracijo dodatnih funkcionalnosti, smo API zasnovali v manager pogledu, torej poleg osnevne funkcionalnosti pregleda in naročanja koktejlov, ter pregleda vseh naročil za mizo, manager lahko še dodaja, odstranjuje in ureja koktejle, ter počisti vsa naročila za mizo (ko je miza plačala in se sprosti). Slike koktejlov so za primer projektne naloge shranjene znotraj mape "img" v "wwwroot", ter so poimenovane ime_koktejla.jpg.
+Za demonstracijo dodatnih funkcionalnosti, sem API zasnovali v manager pogledu, torej poleg osnevne funkcionalnosti pregleda in naročanja koktejlov, ter pregleda vseh naročil za mizo, manager lahko še dodaja, odstranjuje in ureja koktejle, ter počisti vsa naročila za mizo (ko je miza plačala in se sprosti). Slike koktejlov so za primer projektne naloge shranjene znotraj mape "img" v "wwwroot", ter so poimenovane ime_koktejla.jpg.
 
 Koktejli in naročila so shranjena v različnih tabelah znotraj iste podatkovne baze. V primeru da manager spremeni ceno koktejla, po tem ko ga je stranka že naročila (primer: happy hour), cena na računu ostane nespremenjena za že naročeni koktejl, novi se pa obračunajo po aktualni ceni.
 
